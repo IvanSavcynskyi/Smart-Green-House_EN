@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Green House </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="plant_icon.png">
+</head>
+<body>
+    <script src="eel.js "></script>
+    <div class="elements">
+        <a href="information.html"><img class="information_picture" src="447057.png" alt="information"></a>
+        <p class="b">_______</p>
+        <a href="graph.html"><img class="information_picture" src="graph.png" id="graph_picture" alt="graph"></a>
+        <p class="b">_______</p>
+        <a href="index.html"><img class="information_picture" src="plant_icon.png" id="plant_picture" alt="graph"></a>
+    </div>
+    <div class="main">
+        <h1>Graphs of Sensor Indicators</h1>
+    </div>
+    <div class="graph">
+        <h3>Air Humidity Chart</h3>
+        <p>Once created, the graph will show how the humidity around your seedling has changed over a long period of time!
+        </p>
+        <input class="button" type="button" onClick="create_graph_air_humidity()" value="Graph of air humidity" />
+    </div>
+    <div class="graph">     
+        <h3>Soil Moisture Chart</h3>
+        <p>Once created, the graph will show how the soil moisture around your seedling has changed over a long period of time!
+        </p>
+        <input class="button" type="button" onClick="create_graph_humidity()" value="Soil moisture graph" />
+    </div>
+    <div class="graph">    
+        <h3>Air Temperature Chart</h3>
+        <p>Once created, the graph will show how the air temperature around your seedling has changed over a long period of time!
+        </p>
+        <input class="button" type="button" onClick="graph_air_temperature()" value="Graph of air temperature" />
+    </div>
+    <script>
+        async function create_graph_air_humidity(){
+            await eel.create_graph_air_humidity();
+        }
+        async function create_graph_humidity(){
+            await eel.create_graph_humidity();
+        }
+        async function graph_air_temperature(){
+            await eel.graph_air_temperature();
+        }
+       </script>
+</body>
+</html>
